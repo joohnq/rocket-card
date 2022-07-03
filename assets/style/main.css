@@ -18,11 +18,21 @@
 
 body {
   background-color: var(--bg-card);
+  position: relative;
+  height: 100vh;
+}
+
+.card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   display: grid;
   grid-template: 
   'customBg'
   'cardUser';
+  gap: 20px;
 }
 
 ul {
@@ -56,7 +66,8 @@ a{
 }
 
 #btnChangeBg {
-  padding: 20px 40px;
+  padding: 20px 0;
+  width: 250px;
 
   background-color: var(--bg);
 
@@ -81,13 +92,11 @@ a{
   max-width: 400px;
   height: 600px;
 
-  margin: 30px 0 20px;
+  margin: 0 auto;
 
   border-radius: 40px;
 
   grid-area: cardUser;
-
-  margin: 0 auto;
 }
 
 #card {
@@ -182,7 +191,7 @@ footer img {
 }
 
 @media (min-width: 900px) {
-  body{
+  .card{
     grid-template: 'cardUser customBg';
   }
 
